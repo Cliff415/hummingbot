@@ -139,6 +139,7 @@ def start(self):
             ask_order_level_spreads=ask_order_level_spreads,
             should_wait_order_cancel_confirmation=should_wait_order_cancel_confirmation,
             moving_price_band=moving_price_band
+            HummingbotApplication.main_application().stop()
         )
     except Exception as e:
         self.notify(str(e))
